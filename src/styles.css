@@ -1,10 +1,96 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
 
-html,
-body {
-  height: 100%;
+/* QUICK RESET */
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
 }
-body {
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* CUSTOM PROPS */
+
+html {
+  font-size: 62.5%;
+  /* Typography */
+  --ff-nunito-sans: "Nunito Sans", sans-serif;
+  --fs-regular: 1.4rem;
+  --fs-big: 1.8rem;
+  --fw-regular: 300;
+  --fw-medium: 600;
+  --fw-bold: 800;
+  /* Colors */
+  --clr-blue-400: hsl(209, 23%, 22%);
+  --clr-blue-600: hsl(207, 26%, 17%);
+  --clr-blue-800: hsl(200, 15%, 8%);
+  --clr-gray-200: hsl(0, 0%, 98%);
+  --clr-gray-400: hsl(0, 0%, 52%);
+  --clr-white: hsl(0, 0%, 100%);
+}
+
+/* GENERAL */
+body {
+  font-family: var(--ff-nunito-sans);
+  font-size: var(--fs-regular);
+  font-weight: var(--fw-regular);
+  background-color: var(--clr-gray-200);
+  color: var(--clr-blue-800);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+  font-weight: var(--fw-medium);
+  cursor: pointer;
+}
+
+/* TYPOGRAPHY */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--fw-bold);
+}
+
+h1 {
+  font-size: var(--fs-big);
+}
+
+/* LAYOUT */
+.container,
+.header {
+  padding: 0 6rem;
 }
