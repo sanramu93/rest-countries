@@ -1,0 +1,28 @@
+.home__inputs {
+  display: flex;
+  justify-content: space-between;
+  margin: 3em 0;
+  font-size: var(--fs-big);
+  font-weight: var(--fw-medium);
+}
+
+.home__input {
+  padding: 1em;
+  border-radius: 5px;
+  text-indent: 0.5em;
+}
+
+.home__search {
+  width: 50rem;
+}
+
+.home__select {
+  width: 20rem;
+  color: var(--clr-gray-400);
+}
+
+.home__countries {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  gap: 5em;
+}

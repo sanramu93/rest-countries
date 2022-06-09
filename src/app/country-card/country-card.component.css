@@ -1,0 +1,9 @@
+.country {
+  box-shadow: var(--bs-regular);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.country__info {
+  padding: 1.6em;
+}
