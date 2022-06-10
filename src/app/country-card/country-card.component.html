@@ -1,13 +1,11 @@
 <section class="country">
-  <img
-    class="country__flag"
-    src="https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/1920px-Flag_of_Germany.svg.png"
-    alt="Germany Flag"
-  />
+  <img class="country__flag" src="{{ flag }}" alt="Germany Flag" />
   <div class="country__info">
-    <p><b>Germany</b></p>
-    <p><b>Population:</b> 81.770.900</p>
-    <p><b>Region:</b> Europe</p>
-    <p><b>Capital:</b> Berlin</p>
+    <p>
+      <b>{{ name }}</b>
+    </p>
+    <p><b>Population: </b>{{ population }}</p>
+    <p><b>Region: </b>{{ region }}</p>
+    <p><b>Capital: </b>{{ capital }}</p>
   </div>
 </section>

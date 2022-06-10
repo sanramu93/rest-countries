@@ -15,21 +15,9 @@
     </select>
   </section>
   <section class="home__countries">
-    <app-country-card></app-country-card>
-    <app-country-card></app-country-card>
-    <app-country-card></app-country-card>
-    <app-country-card></app-country-card>
-    <app-country-card></app-country-card>
-    <app-country-card></app-country-card>
-    <app-country-card></app-country-card>
-    <app-country-card></app-country-card>
-    <app-country-card></app-country-card>
-    <app-country-card></app-country-card>
-    <app-country-card></app-country-card>
-    <app-country-card></app-country-card>
-    <app-country-card></app-country-card>
-    <app-country-card></app-country-card>
-    <app-country-card></app-country-card>
-    <app-country-card></app-country-card>
+    <app-country-card
+      *ngFor="let country of allCountries"
+      [country]="country"
+    ></app-country-card>
   </section>
 </main>

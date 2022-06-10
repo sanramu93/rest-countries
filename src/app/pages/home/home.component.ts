@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { CountryCardModule } from 'src/app/country-card/country-card.module';
 
 @Component({
   selector: 'app-home',
@@ -6,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  allCountries: [];
+  allCountries: {}[];
+  country: CountryCardModule;
 
-  constructor() {}
+  constructor(private httpClient: HttpClient) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getAllCountries();
+  }
+
+  getAllCountries() {
+    this.httpClient
+      .get<any>('https://restcountries.com/v3.1/all')
+      .subscribe((response) => {
+        console.log(response);
+        this.allCountries = response;
+      });
+  }
 }
