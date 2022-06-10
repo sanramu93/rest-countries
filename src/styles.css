@@ -78,6 +78,7 @@ body {
   font-weight: var(--fw-regular);
   background-color: var(--clr-gray-200);
   color: var(--clr-blue-800);
+  overflow: scroll;
 }
 
 button {
@@ -107,4 +108,5 @@ h1 {
   max-width: 128rem;
   margin: 0 auto;
   padding: 0 2em;
+  padding-bottom: 4em;
 }

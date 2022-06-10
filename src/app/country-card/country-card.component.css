@@ -2,14 +2,23 @@
   box-shadow: var(--bs-regular);
   border-radius: 8px;
   overflow: hidden;
-  height: 30rem;
 }
 
 .flag {
-  height: 50%;
+  height: 15rem;
   width: 100%;
+  object-fit: cover;
 }
 
 .info {
-  padding: 1.6em;
+  padding: 2em;
+}
+
+.info p {
+  padding: 0.2em;
+}
+
+.name {
+  font-size: var(--fs-big);
+  margin-bottom: 0.5em;
 }

@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CountryCardModule } from './country-card.module';
 
 @Component({
   selector: 'app-country-card',
@@ -15,6 +14,7 @@ export class CountryCardComponent implements OnInit {
     region: string;
     capital: string[];
   };
+
   flag: string;
   name: string;
   population: string;

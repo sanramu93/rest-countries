@@ -21,6 +21,11 @@
   color: var(--clr-gray-400);
 }
 
+option {
+  font-size: var(--fs-big);
+  padding: 1em;
+}
+
 .countries {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
