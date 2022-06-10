@@ -21,7 +21,6 @@ export class HomeComponent implements OnInit {
     this.httpClient
       .get<any>('https://restcountries.com/v3.1/all')
       .subscribe((response) => {
-        console.log(response);
         this.allCountries = response;
       });
   }

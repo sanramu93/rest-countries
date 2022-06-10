@@ -2,8 +2,14 @@
   box-shadow: var(--bs-regular);
   border-radius: 8px;
   overflow: hidden;
+  height: 30rem;
 }
 
-.country__info {
+.flag {
+  height: 50%;
+  width: 100%;
+}
+
+.info {
   padding: 1.6em;
 }

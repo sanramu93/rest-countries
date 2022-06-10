@@ -1,4 +1,4 @@
-.home__inputs {
+.inputs {
   display: flex;
   justify-content: space-between;
   margin: 3em 0;
@@ -6,22 +6,22 @@
   font-weight: var(--fw-medium);
 }
 
-.home__input {
+.input {
   padding: 1em;
   border-radius: 5px;
   text-indent: 0.5em;
 }
 
-.home__search {
+.search {
   width: 50rem;
 }
 
-.home__select {
+.select {
   width: 20rem;
   color: var(--clr-gray-400);
 }
 
-.home__countries {
+.countries {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
   gap: 5em;

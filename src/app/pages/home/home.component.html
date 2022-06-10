@@ -1,11 +1,11 @@
 <main class="home">
-  <section class="home__inputs">
+  <section class="inputs">
     <input
-      class="home__input home__search"
+      class="input search"
       type="text"
       placeholder="Search for a country..."
     />
-    <select class="home__input home__select" name="region" id="region">
+    <select class="input select" name="region" id="region">
       <option value="">Filter by Region</option>
       <option value="Africa">Africa</option>
       <option value="America">America</option>
@@ -14,7 +14,7 @@
       <option value="Oceania">Oceania</option>
     </select>
   </section>
-  <section class="home__countries">
+  <section class="countries">
     <app-country-card
       *ngFor="let country of allCountries"
       [country]="country"
