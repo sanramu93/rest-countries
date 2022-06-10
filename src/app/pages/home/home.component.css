@@ -6,14 +6,31 @@
   font-weight: var(--fw-medium);
 }
 
-.input {
-  padding: 1em;
+.search,
+.select {
+  border: var(--clr-gray-400);
+  box-shadow: var(--bs-regular);
+  padding: 0.5em 1em;
   border-radius: 5px;
-  text-indent: 0.5em;
 }
 
 .search {
+  display: flex;
   width: 50rem;
+}
+
+.search .btn {
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.search .icon {
+  margin-right: 0.5em;
+}
+
+.search input {
+  width: 100%;
 }
 
 .select {
@@ -21,7 +38,7 @@
   color: var(--clr-gray-400);
 }
 
-option {
+.select option {
   font-size: var(--fs-big);
   padding: 1em;
 }

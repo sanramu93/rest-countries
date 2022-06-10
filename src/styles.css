@@ -41,8 +41,12 @@ img {
 input,
 select {
   font-family: inherit;
-  border: var(--clr-gray-400);
-  box-shadow: var(--bs-regular);
+  font-size: inherit;
+}
+
+input {
+  border: none;
+  background-color: transparent;
 }
 
 select {

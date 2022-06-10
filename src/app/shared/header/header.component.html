@@ -1,8 +1,10 @@
 <header class="header">
   <div class="container">
     <h1>Where in the world?</h1>
-    <button class="btn-dark-mode">
-      <mat-icon class="icon">dark_mode</mat-icon>
+    <button (click)="onDarkModeClick()" class="btn-dark-mode">
+      <mat-icon class="icon">
+        {{ darkMode ? "light_mode" : "dark_mode" }}
+      </mat-icon>
       Dark Mode
     </button>
   </div>

@@ -1,12 +1,16 @@
 <main class="home">
   <section class="inputs">
-    <input
-      (input)="onSearchChange($event)"
-      class="input search"
-      type="text"
-      placeholder="Search for a country..."
-      [value]="searchInput"
-    />
+    <div class="search">
+      <button class="btn">
+        <mat-icon class="icon"> search </mat-icon>
+      </button>
+      <input
+        (input)="onSearchChange($event)"
+        type="text"
+        placeholder="Search for a country..."
+        [value]="searchInput"
+      />
+    </div>
     <select
       (input)="onRegionSelect($event)"
       class="input select"
