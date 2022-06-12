@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { AppService } from 'src/app/app.service';
 
 @Component({
   selector: 'app-home',
@@ -11,11 +12,15 @@ export class HomeComponent implements OnInit {
   countries: {}[];
   searchInput = '';
   selectedRegion: string;
+  darkMode: boolean = false;
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient, private appService: AppService) {}
 
   ngOnInit(): void {
     this.getAllCountries();
+    this.appService.darkMode.subscribe((darkMode: boolean) => {
+      this.darkMode = darkMode;
+    });
   }
 
   getAllCountries() {

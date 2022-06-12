@@ -77,20 +77,35 @@ html {
 
 /* GENERAL */
 body {
+  --clr-primary: var(--clr-gray-200);
+  --clr-secondary: var(--clr-blue-800);
+  --clr-tertiary: var(--clr-gray-400);
+
   font-family: var(--ff-nunito-sans);
   font-size: var(--fs-regular);
   font-weight: var(--fw-regular);
-  background-color: var(--clr-gray-200);
-  color: var(--clr-blue-800);
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary);
   overflow: scroll;
 }
 
+.dark-mode {
+  --clr-primary: var(--clr-blue-600);
+  --clr-secondary: var(--clr-gray-200);
+  --clr-tertiary: var(--clr-blue-400);
+}
+
 button {
+  color: inherit;
   background-color: transparent;
   border: none;
   font-family: inherit;
   font-weight: var(--fw-medium);
   cursor: pointer;
+}
+
+i {
+  color: inherit;
 }
 
 /* TYPOGRAPHY */

@@ -3,7 +3,7 @@
   padding: 2rem 0;
 }
 
-.header .container {
+.header > .container {
   padding-bottom: 0;
   display: flex;
   justify-content: space-between;
@@ -15,6 +15,7 @@
 }
 
 .btn-dark-mode .icon {
+  color: var(--clr-secondary);
   display: flex;
   align-items: center;
   font-size: 1.8em;
