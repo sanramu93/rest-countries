@@ -41,6 +41,10 @@ export class HomeComponent implements OnInit {
     this.selectedRegion = '';
   }
 
+  onSearchBtnClick(inputEl: HTMLElement) {
+    inputEl.focus();
+  }
+
   onRegionSelect(e: any) {
     this.selectedRegion = e.target.value;
     this.countries = this.allCountries;
