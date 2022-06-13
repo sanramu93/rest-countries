@@ -51,6 +51,12 @@ input {
 
 select {
   cursor: pointer;
+  background-color: transparent;
+}
+
+option {
+  background-color: inherit;
+  color: inherit;
 }
 
 /* CUSTOM PROPS */
@@ -73,26 +79,24 @@ html {
   --clr-white: hsl(0, 0%, 100%);
   /* Box Shadow */
   --bs-regular: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  /* Transitions */
+  --tr-dark-mode: background-color 0.3s ease-out, color 0.2s ease-out;
 }
 
 /* GENERAL */
 body {
-  --clr-primary: var(--clr-gray-200);
-  --clr-secondary: var(--clr-blue-800);
-  --clr-tertiary: var(--clr-gray-400);
-
   font-family: var(--ff-nunito-sans);
   font-size: var(--fs-regular);
   font-weight: var(--fw-regular);
-  background-color: var(--clr-primary);
-  color: var(--clr-secondary);
+  background-color: var(--clr-gray-200);
+  color: var(--clr-blue-800);
   overflow: scroll;
+  transition: var(--tr-dark-mode);
 }
 
 .dark-mode {
-  --clr-primary: var(--clr-blue-600);
-  --clr-secondary: var(--clr-gray-200);
-  --clr-tertiary: var(--clr-blue-400);
+  background-color: var(--clr-blue-600);
+  color: var(--clr-gray-200);
 }
 
 button {

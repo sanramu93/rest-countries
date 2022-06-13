@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" [ngClass]="{ 'dark-mode': darkMode }">
   <div class="container">
     <h1>Where in the world?</h1>
     <button (click)="onDarkModeClick()" class="btn-dark-mode">

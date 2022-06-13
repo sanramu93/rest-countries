@@ -1,6 +1,14 @@
 .header {
+  background-color: var(--clr-gray-200);
+  color: var(--clr-blue-800);
   box-shadow: var(--bs-regular);
   padding: 2rem 0;
+}
+
+.dark-mode {
+  background-color: var(--clr-blue-400);
+  color: var(--clr-gray-200);
+  transition: var(--tr-dark-mode);
 }
 
 .header > .container {

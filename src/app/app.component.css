@@ -1,0 +1,4 @@
+.dark-mode {
+  background-color: var(--clr-blue-600);
+  color: var(--clr-gray-200);
+}

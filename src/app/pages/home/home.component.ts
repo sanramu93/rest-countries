@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   countries: {}[];
   searchInput = '';
   selectedRegion: string;
-  darkMode: boolean = false;
+  darkMode = false;
 
   constructor(private httpClient: HttpClient, private appService: AppService) {}
 

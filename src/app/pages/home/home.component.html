@@ -1,12 +1,13 @@
 <main class="home">
   <section class="inputs">
-    <div class="search">
+    <div class="search" [ngClass]="{ 'dark-mode': darkMode }">
       <button (click)="onSearchBtnClick(searchInputEl)" class="btn">
         <mat-icon class="icon"> search </mat-icon>
       </button>
       <input
         (input)="onSearchChange($event)"
         type="text"
+        [ngClass]="{ 'dark-mode': darkMode }"
         placeholder="Search for a country..."
         [value]="searchInput"
         #searchInputEl
@@ -15,6 +16,7 @@
     <select
       (input)="onRegionSelect($event)"
       class="input select"
+      [ngClass]="{ 'dark-mode': darkMode }"
       name="region"
       id="region"
     >
