@@ -1,5 +1,4 @@
-.dark-mode {
-  background-color: var(--clr-blue-400);
+.home {
   transition: var(--tr-dark-mode);
 }
 
@@ -9,6 +8,10 @@
   margin: 3em 0;
   font-size: var(--fs-big);
   font-weight: var(--fw-medium);
+}
+
+.input {
+  background-color: var(--clr-tertiary);
 }
 
 .search,
@@ -46,6 +49,7 @@
 }
 
 .select {
+  color: inherit;
   width: 20rem;
 }
 
@@ -58,4 +62,23 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
   gap: 5em;
+}
+
+/* Spinner loader */
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  stroke: var(--clr-blue-400);
+}
+
+.spinner.dark-mode {
+  stroke: var(--clr-gray-200);
+  background-color: transparent;
+}
+
+::ng-deep .mat-progress-spinner circle,
+.mat-spinner circle {
+  stroke: inherit;
 }

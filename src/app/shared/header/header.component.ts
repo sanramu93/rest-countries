@@ -7,11 +7,15 @@ import { AppService } from 'src/app/app.service';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  darkMode: boolean = false;
+  darkMode: boolean;
 
   constructor(private appService: AppService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.appService.darkMode.subscribe((darkMode: boolean) => {
+      this.darkMode = darkMode;
+    });
+  }
 
   onDarkModeClick() {
     this.darkMode = !this.darkMode;

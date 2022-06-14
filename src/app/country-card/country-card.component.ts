@@ -1,4 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChange,
+} from '@angular/core';
 import { AppService } from '../app.service';
 
 @Component({
@@ -7,7 +13,6 @@ import { AppService } from '../app.service';
   styleUrls: ['./country-card.component.css'],
 })
 export class CountryCardComponent implements OnInit {
-  darkMode = false;
   flag: string;
   name: string;
   population: string;
@@ -29,9 +34,5 @@ export class CountryCardComponent implements OnInit {
     this.population = this.country.population;
     this.region = this.country.region;
     this.capital = this.country.capital?.[0];
-
-    this.appService.darkMode.subscribe((darkMode: boolean) => {
-      this.darkMode = darkMode;
-    });
   }
 }

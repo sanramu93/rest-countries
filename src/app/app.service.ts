@@ -6,6 +6,7 @@ import { Subject } from 'rxjs';
 })
 export class AppService {
   darkMode = new Subject();
+
   constructor() {}
 
   communicateDarkMode(darkMode: boolean) {

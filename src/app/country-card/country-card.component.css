@@ -1,12 +1,9 @@
-.dark-mode {
-  background-color: var(--clr-blue-400);
-  transition: var(--tr-dark-mode);
-}
-
 .country {
+  background-color: var(--clr-tertiary);
   box-shadow: var(--bs-regular);
   border-radius: 8px;
   overflow: hidden;
+  height: 35rem;
 }
 
 .flag {

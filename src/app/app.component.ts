@@ -7,6 +7,7 @@ import { AppService } from './app.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
+  darkMode: boolean;
   title = 'rest-countries';
 
   constructor(private appService: AppService) {}
@@ -14,6 +15,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.appService.darkMode.subscribe((darkMode: boolean) => {
       this.toggleDarkMode(darkMode);
+      this.darkMode = darkMode;
     });
   }
 
