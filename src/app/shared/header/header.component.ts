@@ -11,11 +11,7 @@ export class HeaderComponent implements OnInit {
 
   constructor(private appService: AppService) {}
 
-  ngOnInit(): void {
-    this.appService.darkMode.subscribe((darkMode: boolean) => {
-      this.darkMode = darkMode;
-    });
-  }
+  ngOnInit(): void {}
 
   onDarkModeClick() {
     this.darkMode = !this.darkMode;

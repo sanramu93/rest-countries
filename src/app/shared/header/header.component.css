@@ -1,14 +1,8 @@
 .header {
-  background-color: var(--clr-gray-200);
-  color: var(--clr-blue-800);
+  background-color: var(--clr-tertiary);
+  color: var(--clr-primary);
   box-shadow: var(--bs-regular);
   padding: 2rem 0;
-  transition: var(--tr-dark-mode);
-}
-
-.dark-mode.header {
-  background-color: var(--clr-blue-400);
-  color: var(--clr-gray-200);
 }
 
 .header > .container {
@@ -23,7 +17,7 @@
 }
 
 .btn-dark-mode .icon {
-  color: var(--clr-secondary);
+  color: var(--clr-primary);
   display: flex;
   align-items: center;
   font-size: 1.8em;

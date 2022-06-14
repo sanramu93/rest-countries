@@ -1,6 +1,6 @@
 <main class="home">
   <section class="inputs">
-    <div class="input search" [ngClass]="{ 'dark-mode': darkMode }">
+    <div class="input search">
       <button (click)="onSearchBtnClick(searchInputEl)" class="btn">
         <mat-icon class="icon"> search </mat-icon>
       </button>
@@ -28,11 +28,7 @@
       <option value="Oceania">Oceania</option>
     </select>
   </section>
-  <div
-    *ngIf="!allCountries"
-    class="spinner"
-    [ngClass]="{ 'dark-mode': darkMode }"
-  >
+  <div *ngIf="!allCountries" class="spinner">
     <mat-spinner></mat-spinner>
   </div>
   <section class="countries">

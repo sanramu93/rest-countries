@@ -1,5 +1,5 @@
 .home {
-  transition: var(--tr-dark-mode);
+  color: var(--clr-primary);
 }
 
 .inputs {
