@@ -23,3 +23,9 @@
   font-size: 1.8em;
   margin-right: 0.4em;
 }
+
+@media screen and (max-width: 400px) {
+  .header > .container {
+    padding: 0 2em;
+  }
+}

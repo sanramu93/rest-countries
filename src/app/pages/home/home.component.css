@@ -10,12 +10,9 @@
   font-weight: var(--fw-medium);
 }
 
-.input {
-  background-color: var(--clr-tertiary);
-}
-
 .search,
 .select {
+  background-color: var(--clr-tertiary);
   border: var(--clr-gray-400);
   box-shadow: var(--bs-regular);
   padding: 0.5em 1em;
@@ -25,6 +22,7 @@
 .search {
   display: flex;
   width: 50rem;
+  margin-right: 1em;
 }
 
 .search .btn {
@@ -51,6 +49,7 @@
 .select {
   color: inherit;
   width: 20rem;
+  cursor: pointer;
 }
 
 .select option {
@@ -81,4 +80,16 @@
 ::ng-deep .mat-progress-spinner circle,
 .mat-spinner circle {
   stroke: inherit;
+}
+
+@media screen and (max-width: 650px) {
+  .inputs {
+    flex-direction: column;
+  }
+
+  .search {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1em;
+  }
 }

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { AppService } from 'src/app/app.service';
 
 @Component({
   selector: 'app-home',
@@ -11,25 +12,17 @@ export class HomeComponent implements OnInit {
   countries: {}[];
   searchInput = '';
   selectedRegion: string;
+  isLoading = false;
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient, private appService: AppService) {}
 
   ngOnInit(): void {
-    this.getAllCountries();
-  }
-
-  getAllCountries() {
-    this.httpClient
-      .get<any>('https://restcountries.com/v3.1/all')
-      .subscribe((response) => {
-        // Add searchName for user filters
-        this.allCountries = this.countries = response.map((country: any) => {
-          return {
-            ...country,
-            searchName: country.name.common.toLowerCase(),
-          };
-        });
-      });
+    this.isLoading = true;
+    // Send Http request
+    this.appService.fetchAllCountries().subscribe((allCountries) => {
+      this.isLoading = false;
+      this.allCountries = this.countries = allCountries;
+    });
   }
 
   onSearchChange(e: any) {
