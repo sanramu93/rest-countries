@@ -1,3 +1,8 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .country {
   background-color: var(--clr-tertiary);
   box-shadow: var(--bs-regular);

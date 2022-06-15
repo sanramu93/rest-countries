@@ -10,6 +10,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CountryCardComponent } from './country-card/country-card.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CountryDetailComponent } from './pages/country-detail/country-detail.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     HomeComponent,
     CountryCardComponent,
+    CountryDetailComponent,
   ],
   imports: [
     BrowserModule,

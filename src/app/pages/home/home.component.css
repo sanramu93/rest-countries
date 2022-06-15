@@ -72,11 +72,6 @@
   stroke: var(--clr-blue-400);
 }
 
-.spinner.dark-mode {
-  stroke: var(--clr-gray-200);
-  background-color: transparent;
-}
-
 ::ng-deep .mat-progress-spinner circle,
 .mat-spinner circle {
   stroke: inherit;

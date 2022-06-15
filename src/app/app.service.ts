@@ -8,11 +8,20 @@ import { map } from 'rxjs/operators';
 })
 export class AppService {
   darkMode = new Subject();
+  countryName: string;
 
   constructor(private httpClient: HttpClient) {}
 
   communicateDarkMode(darkMode: boolean) {
     this.darkMode.next(darkMode);
+  }
+
+  setCountryName(name: string) {
+    this.countryName = name;
+  }
+
+  getCountryName() {
+    return this.countryName;
   }
 
   fetchAllCountries() {
@@ -26,5 +35,11 @@ export class AppService {
         });
       })
     );
+  }
+
+  fetchCountryByName(name: string) {
+    return this.httpClient
+      .get<{}[]>(`https://restcountries.com/v3.1/name/${name}`)
+      .pipe(map((country) => country[0]));
   }
 }

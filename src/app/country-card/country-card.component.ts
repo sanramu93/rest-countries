@@ -1,10 +1,5 @@
-import {
-  Component,
-  Input,
-  OnChanges,
-  OnInit,
-  SimpleChange,
-} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { AppService } from '../app.service';
 
 @Component({
@@ -34,5 +29,9 @@ export class CountryCardComponent implements OnInit {
     this.population = this.country.population;
     this.region = this.country.region;
     this.capital = this.country.capital?.[0];
+  }
+
+  onCountryClick() {
+    this.appService.setCountryName(this.name);
   }
 }
